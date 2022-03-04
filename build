@@ -1,11 +1,12 @@
 #!/bin/bash
 
-TARGET=target
+TARGET=app
 
 mkdir -p $TARGET
 rm -rf $TARGET/*
 
-cp src/html/* $TARGET/
+cp src/static/* $TARGET/
+cp src/img/* $TARGET/
 
 node_modules/google-closure-compiler/cli.js \
    --js node_modules/google-closure-library/**/*.js \
