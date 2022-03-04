@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="voter model,interacting particle system,probability,interactive,simulation,canvas,javascript" />
+    <meta name="description" content="The voter model is a probabilistic system which models opinion dynamics.  The site implements an interactive browser-based simulation of the voter model." />
+    <title>The Voter Model: HTML5 Canvas Simulation</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="requestAnimFrameTweak.js"></script>
+    <script src="voter.js"></script>
+  </head>
+
+  <body onload="extern.entrypoint();">
+    <div id="mainContainer">
+      <h1>The Voter Model</h1>
+      <div id="blurb" class="center">
+	<p>The <a href="http://en.wikipedia.org/wiki/Voter_model">voter model</a> is a probabilistic model describing opinion dynamics on a graph.  Members of a population each have an opinion, represented by the colors of tiles in a lattice, which they change from time to time by adopting the opinion of a random neighbor.  Different selection models for the opinion updates result in markedly different behavior of the population's opinions over time.</p>
+	<p>Select some options and click "Start Simulation" to begin an interactive simulation of the voter model.  The controls that appear allow you to pause and unpause the simulation, and to move the simulation forward by a larger number of steps.  Additionally, click and drag on the simulation in order to directly change the opinions of members of the population.</p>
+      </div>
+      <hr>
+      <div id="noscriptContainer" class="center">
+	<p>This page requires <a href="http://en.wikipedia.org/wiki/JavaScript">Javascript</a> to run.  Enable Javascript in your web browser settings to proceed.</p>
+
+	<img src="voter-sample.jpg" alt="Image of the standard voter model." class="center"></img>
+      </div>
+      <div id="promptContainer" class="center">
+	<table id="promptTable">
+	  <tr>
+	    <td>
+	      <table id="inputsTable">
+		<tr>
+		  <td class="tleft" style="text-align:left;">
+		    Model Dimensions:
+		  </td>
+		  <td class="tright">
+		    X:
+		    <input id="xDimSelector" type="number" min="1"></input>
+		    Y:
+		    <input id="yDimSelector" type="number" min="1"></input>
+		  </td>
+		</tr>
+		<tr>
+		  <td class="tleft">
+		    Selection Model:
+		  </td>
+		  <td class="tright">
+		    <select id="modelSelector"></select>
+		  </td>
+		</tr>
+		<tr>
+		  <td class="tleft">
+		    Number of Opinions:
+		  </td>
+		  <td class="tright">
+		    <input id="statesSelector" type="number" min="1" value=""></input>
+		  </td>
+		</tr>
+		<tr>
+		  <td class="tleft">
+		    Color Scheme:
+		  </td>
+		  <td class="tright">
+		    <select id="colorSchemeSelector"></select>
+		  </td>
+		</tr>
+		<tr>
+		  <td class="tleft">
+		    Tile Size:
+		  </td>
+		  <td class="tright">
+		    <input id="sizeSelector" type="number" min="1" value="10"></input>
+		  </td>
+		</tr>
+	      </table>
+	    </td>
+	    <td>
+	      <p id="modelDisplay"></p>
+	    </td>
+	  </tr>
+	</table>
+	<button id="startSimulation">Start Simulation</button>
+      </div>
+      <div id="canvasContainer" class="center">
+	<div id="canvasDiv" style="text-align:right;" class="center">
+	  <canvas id="canvas" class="unselectable"></canvas>
+	</div>
+	<div id="toolBox">
+	  <table id="toolBoxTable" class="center">
+	    <tr>
+	      <td style="text-align:left;">
+		Progress by <input id="progressText" type="number" min="0"></input> steps:
+	      </td>
+	      <td>
+		<button id="progressButton">Progress!</button>
+	      </td>
+	    </tr>
+	    <tr>
+	      <td style="text-align:left;">
+		Pause the simulation:
+	      </td>
+	      <td>
+		<button id="pauseButton">Pause</button>
+	      </td>
+	    </tr>
+	  </table>
+	</div>
+	<button id="newSimulation">Create New Simulation</button>
+      </div>
+    </div>
+    <hr>
+    <div id="license" class="center">
+      <p>Copyright &copy;2012 Bryan Gillespie<br/>This application is freely released under the <a href="license.html">MIT License</a>.
+    </div>
+  </body>
+</html>

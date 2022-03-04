@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "google-closure-library": "^20220202.0.0"
+  },
+  "devDependencies": {
+    "google-closure-compiler": "^20220301.0.0",
+    "google-closure-deps": "^20220202.0.0"
+  }
+}

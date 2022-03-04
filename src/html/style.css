@@ -1,0 +1,176 @@
+body
+{
+  background:url("noise.png");
+  background-repeat:repeat;
+  }
+
+table, tr, td
+{
+  border:0px;
+  padding:3px 0px 3px 0px;
+  margin:0px;
+  }
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}
+
+button, select
+{
+  height:4ex;
+  }
+
+input[type="number"]
+{
+  height:3ex;
+  text-align:center;
+  }
+
+#mainContainer
+{
+  text-align:center;
+  }
+
+#blurb
+{
+  width:680px;
+  text-align:justify;
+  }
+
+#noscriptContainer
+{
+  text-align:justify;
+  width:680px;
+  }
+
+#promptContainer
+{
+  display:none;
+  width:680px;
+  }
+
+#promptContainer input[type="number"]
+{ 
+  width:4em;
+  }
+
+#promptTable
+{
+  border:none;
+  border-spacing:0px;
+  margin:0px;
+  padding:0px;
+  }
+
+.tleft
+{
+  text-align:left;
+  }
+
+#inputsTable
+{
+  width:380px;
+  border:none;
+  border-spacing:0px;
+  margin:0px;
+  padding:0px;
+  }
+
+#inputsTable tr
+{
+  margin:0px;
+  padding:0px;
+  }
+
+#inputsTable td
+{
+  padding:3px;
+  }
+
+#inputsTable td.tleft
+{
+  text-align:left;
+  padding:3px 3px 3px 0px;
+  }
+
+#inputsTable td.tright
+{
+    text-align:left;
+  }
+
+#modelDisplay
+{
+  text-align:justify;
+  margin: 0 0 0 20px;
+  }
+
+#startSimulation, #newSimulation
+{
+  margin:10px;
+  font-size:100%;
+  }
+
+#canvasContainer
+{
+  display:none;
+  text-align:center;
+  }
+
+#toolBoxTable
+{
+  width:440px;
+  }
+
+#progressText
+{
+  width:15ex;
+  height:3ex;
+  text-align:center;
+  }
+
+#progressButton, #pauseButton
+{
+  width:120px;
+  }
+
+.center
+{
+  margin:auto;
+  margin:auto;
+  }
+
+.left
+{
+  margin-right:auto;
+  }
+
+.right
+{
+  margin-left:auto;
+  }
+
+#canvasContainer *
+{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+#progressText
+{
+   -moz-user-select: auto !important;
+   -khtml-user-select: auto !important;
+   -webkit-user-select: auto !important;
+   -o-user-select: auto !important;
+   user-select: auto !important;
+}
+
+#license
+{
+  width:680px;
+  text-align:center;
+  font-size:80%;
+}

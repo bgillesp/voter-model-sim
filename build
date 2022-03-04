@@ -1,0 +1,15 @@
+#!/bin/bash
+
+TARGET=target
+
+mkdir -p $TARGET
+rm -rf $TARGET/*
+
+cp src/html/* $TARGET/
+
+node_modules/google-closure-compiler/cli.js \
+   --js node_modules/google-closure-library/**/*.js \
+   --js src/lib/*.js \
+   --dependency_mode=PRUNE \
+   --entry_point=extern \
+   --js_output_file $TARGET/voter.js
